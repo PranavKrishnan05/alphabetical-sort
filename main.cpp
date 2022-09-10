@@ -1,8 +1,8 @@
 #include <iostream>
-#include <string>
+#include <string>//needed to use "string" to make the array
 #include <unordered_map>
 using std::string;
-
+//Creating a dictionary of letters and special charecters
 void countingSort(string array[], int length, size_t characterAt){
     std::unordered_map<string, int> codeFor = {
         {" ",0},{"-",0},{"'",0},{"À",1},{"ā",1},{"Ă",1},{"ă",1},{"á",1},{"æ",1},{"Æ",1},{"à",1},{"a",1},{"A",1},{"Ä",1},{"b",2},{"B",2},{"c",3},{"C",3},{"Ç",3},{"ç",3},{"d",4},{"D",4},{"e",5},{"E",5},{"ê",5},{"ë",5},{"è",5},{"é",5},{"È",5},{"É",5},{"Ê",5},{"Ë",5},{"f",6},{"F",6},{"g",7},{"G",7},{"h",8},{"H",8},{"i",9},{"I",9},{"¡",9},{"Ì",9},{"Í",9},{"Î",9},{"Ï",9},{"ï",9},{"î",9},{"ì",9},{"j",10},{"J",10},{"k",11},{"K",11},{"l",12},{"L",12},{"m",13},{"M",13},{"n",14},{"N",14},{"ñ",14},{"Ñ",14},{"o",15},{"O",15},{"ô",15},{"ö",15},{"ò",15},{"ó",15},{"Ò",15},{"Ó",15},{"Ô",15},{"Õ",15},{"Ö",15},{"p",16},{"P",16},{"q",17},{"Q",17},{"r",18},{"R",18},{"s",19},{"S",19},{"t",20},{"T",20},{"U",21},{"u",21},{"v",22},{"V",22},{"w",23},{"W",23},{"x",24},{"X",24},{"y",25},{"Y",25},{"Ÿ",25},{"ý",25},{"z",26},{"Z",26}
@@ -35,7 +35,7 @@ void countingSort(string array[], int length, size_t characterAt){
 }
 
 void radixSort(string unsortedArray[], int length){
-    size_t max = unsortedArray[0].size();
+    size_t max = unsortedArray[0].size();//declaring array size
     for (int i = 1; i < length; i++){
         if (unsortedArray[i].size()>max)
             max = unsortedArray[i].size();
